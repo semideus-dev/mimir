@@ -6,7 +6,7 @@
     "build": "next build",
     "dev": "next dev",
     "start": "next start",
-    "postinstall": "fumadocs-mdx"
+    "postinstall": "fumadocs-mdx && prisma generate"
   },
   "dependencies": {
     "@clerk/nextjs": "^6.9.9",
