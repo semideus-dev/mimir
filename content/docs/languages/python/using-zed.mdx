@@ -1,0 +1,40 @@
+---
+title: Using Zed
+description: Setting up and using Zed for Python development
+---
+
+I will be using Zed as my primary code editor for this series but you are free to use any code editor you prefer.
+
+## Installation
+
+To install Zed, follow these steps:
+
+1. Go to the [Zed website](https://zed.dev/download) and download the installer for your operating system.
+2. Run the installer and follow the on-screen instructions to complete the installation.
+3. Once the installation is complete, open Zed inside a folder.
+
+<Callout type="warn">
+  As of now, Zed is only available for MacOS and Linux.
+</Callout>
+
+## Using Zed Terminal
+
+Zed comes with a built-in terminal that allows you to run commands and interact with your system. To open the terminal, go to __View > Terminal__ in the menu bar. You can also use `CMD`+`J` or `control`+`~` shortcuts on your macOS to open it quickly.
+
+Once there, go ahead and create a new Python file.
+
+```zsh title="Terminal"
+zed hello.py
+```
+
+This will create a new file called `hello.py` in the current directory. You can now start writing your Python code. 
+
+```python title="hello.py"
+print("Hello, World!")
+```
+
+Save the file and you're ready to run your code. To run, go back to the terminal and type `python3 hello.py` to see the output.
+
+<Callout type="info">
+    Since most __UNIX__ based systems (macOS, Linux, etc.) have an older version of Python installed by default, you may need to use `python3` instead of `python` to run your code.
+</Callout>
