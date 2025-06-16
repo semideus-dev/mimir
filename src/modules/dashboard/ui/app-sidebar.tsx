@@ -82,15 +82,12 @@ export function AppSidebar() {
             <SidebarMenu>
               {learn.map((item) => (
                 <SidebarMenuItem key={item.title}>
-                  <SidebarMenuButton size="lg">
-                    <Link
-                      className="flex h-full w-full items-center gap-3"
-                      href={item.url}
-                    >
+                  <Link className="block" href={item.url}>
+                    <SidebarMenuButton className="cursor-pointer" size="lg">
                       <item.icon size={22} />
                       <span>{item.title}</span>
-                    </Link>
-                  </SidebarMenuButton>
+                    </SidebarMenuButton>
+                  </Link>
                 </SidebarMenuItem>
               ))}
             </SidebarMenu>
@@ -102,15 +99,12 @@ export function AppSidebar() {
             <SidebarMenu>
               {profile.map((item) => (
                 <SidebarMenuItem key={item.title}>
-                  <SidebarMenuButton size="lg">
-                    <Link
-                      className="flex h-full w-full items-center gap-3"
-                      href={item.url}
-                    >
+                  <Link className="block" href={item.url}>
+                    <SidebarMenuButton className="cursor-pointer" size="lg">
                       <item.icon size={22} />
                       <span>{item.title}</span>
-                    </Link>
-                  </SidebarMenuButton>
+                    </SidebarMenuButton>
+                  </Link>
                 </SidebarMenuItem>
               ))}
             </SidebarMenu>

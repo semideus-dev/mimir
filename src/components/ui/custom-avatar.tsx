@@ -9,21 +9,20 @@ import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 interface CustomAvatarProps {
   seed: string;
   className?: string;
-  varient: "botttsNeutral" | "initials";
+  variant: "botttsNeutral" | "initials";
 }
 
 export default function CustomAvatar({
   seed,
   className,
-  varient,
+  variant,
 }: CustomAvatarProps) {
-  let avatar;
+  const avatar = React.useMemo(() => {
+    return variant === "botttsNeutral"
+      ? createAvatar(botttsNeutral, { seed })
+      : createAvatar(initials, { seed, fontSize: 32 });
+  }, [seed, variant]);
 
-  if (varient === "botttsNeutral") {
-    avatar = createAvatar(botttsNeutral, { seed });
-  } else {
-    avatar = createAvatar(initials, { seed, fontSize: 32 });
-  }
   return (
     <Avatar className={cn(className)}>
       <AvatarImage src={avatar.toDataUri()} alt="avatar" />

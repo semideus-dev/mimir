@@ -3,10 +3,9 @@
 import React from "react";
 
 import { authClient } from "@/lib/auth-client";
-import { GlassButton } from "@/components/ui/glass-button";
-import { PiSpinner } from "react-icons/pi";
-import { Avatar, AvatarImage } from "@/components/ui/avatar";
+
 import CustomAvatar from "@/components/ui/custom-avatar";
+import { Avatar, AvatarImage } from "@/components/ui/avatar";
 import { Skeleton } from "@/components/ui/skeleton";
 
 export default function UserButton() {
@@ -32,7 +31,7 @@ export default function UserButton() {
       ) : (
         <CustomAvatar
           seed={data.user.name}
-          varient="initials"
+          variant="initials"
           className="size-10"
         />
       )}
