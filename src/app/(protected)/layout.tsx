@@ -1,6 +1,9 @@
-import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
-import { AppSidebar } from "@/modules/dashboard/ui/app-sidebar";
 import React from "react";
+
+import AppNavbar from "@/modules/dashboard/ui/app-navbar";
+import AppSidebar from "@/modules/dashboard/ui/app-sidebar";
+
+import { SidebarProvider } from "@/components/ui/sidebar";
 
 export default function ProtectedLayout({
   children,
@@ -11,7 +14,7 @@ export default function ProtectedLayout({
     <SidebarProvider>
       <AppSidebar />
       <main className="flex h-screen w-screen flex-col">
-        <SidebarTrigger />
+        <AppNavbar />
         {children}
       </main>
     </SidebarProvider>

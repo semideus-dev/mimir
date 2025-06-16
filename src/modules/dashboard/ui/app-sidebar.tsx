@@ -58,13 +58,13 @@ const profile = [
   },
 ];
 
-export function AppSidebar() {
+export default function AppSidebar() {
   return (
-    <Sidebar>
-      <SidebarHeader>
+    <Sidebar className="p-0" >
+      <SidebarHeader className="px-0">
         <Link
           href="/dashboard"
-          className="flex items-center space-x-2 border-b py-2"
+          className="flex items-center space-x-2 border-b py-2 px-2"
         >
           <Image
             src="/assets/mimir-logo.png"
