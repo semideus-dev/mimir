@@ -10,6 +10,7 @@ export default function SocialButtons() {
   function onSubmit({ provider }: Props) {
     return authClient.signIn.social({
       provider: provider,
+      callbackURL: "/dashboard",
     });
   }
   return (
